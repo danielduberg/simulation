@@ -50,7 +50,7 @@
 				  <alwaysOn>true</alwaysOn>
 				  <updateRate>50</updateRate>
 					<topicName>/teraranger/range</topicName>
-					<frameName>/teraranger</frameName>
+					<frameName>/teraranger_link</frameName>
 					<fov>0.001</fov>
 					<radiation>infrared</radiation> <!-- ultrasound or infrared -->
 				</plugin>
