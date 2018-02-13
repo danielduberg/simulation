@@ -34,8 +34,8 @@
 						<horizontal>
               <samples>1</samples>
               <resolution>1.0</resolution>
-              <min_angle>0</min_angle>
-              <max_angle>0.1</max_angle>
+              <min_angle>-0</min_angle>
+              <max_angle>0</max_angle>
             </horizontal>
 					</scan>
 					<range>
@@ -49,7 +49,7 @@
 				  <gaussianNoise>0.001</gaussianNoise>
 				  <alwaysOn>true</alwaysOn>
 				  <updateRate>50</updateRate>
-					<topicName>/teraranger/range</topicName>
+					<topicName>/mavros/distance_sensor/teraranger</topicName>
 					<frameName>/teraranger_link</frameName>
 					<fov>0.001</fov>
 					<radiation>infrared</radiation> <!-- ultrasound or infrared -->
