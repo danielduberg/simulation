@@ -20,8 +20,11 @@
 
     <param name="max_data_age" type="double" value="1.0" />
     <param name="polar_size" type="int" value="360" />
+    
+    <param name="height" type="double" value="0.11" />
 
     <rosparam param="obstacle_topics">[/cloud, /velodyne_points]</rosparam>
+    <rosparam param="360_sensor">[false, true]</rosparam>
   </node>
 
   <node pkg="nodelet" type="nodelet" name="laserscan_to_pointcloud_nodelet" args="load laserscan_to_pointcloud/LTP collision_avoidance_manager" output="screen">
