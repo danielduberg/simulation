@@ -2,6 +2,7 @@
 <launch>
   <node pkg="nodelet" type="nodelet" name="collision_avoidance_manager" args="manager" output="screen" />
 
+<!--
   <node pkg="nodelet" type="nodelet" name="collision_avoidance_nodelet" args="load collision_avoidance/CA collision_avoidance_manager" output="screen">
     <param name="radius" type="double" value="0.41" />
     <param name="security_distance" type="double" value="0.61" />
@@ -28,6 +29,7 @@
     <param name="scan_topic" type="str" value="scan" />
     <param name="cloud_topic" type="str" value="cloud" />
   </node>
+-->
 
   <node pkg="tf" type="static_transform_publisher" name="hokuyo_broadcaster" args="0.02 0 0.08 0 0 0 base_link laser_link 100" />
 
@@ -48,7 +50,7 @@
     <param name="max_yaw_rate" type="double" value="0.7" />
     <param name="robot_base_frame" type="str" value="base_link" />
     <!--    <remap from="collision_free_control" to="controller/setpoint" />-->
-    <!--     <remap from="collision_free_control" to="controller/joy" />-->
+    <remap from="collision_free_control" to="controller/joy" />
   </node>
 
   <arg name="js" default="1" />
