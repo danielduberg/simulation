@@ -108,7 +108,7 @@ setpoint_position:
 
 # setpoint_velocity
 setpoint_velocity:
-  mav_frame: BODY_NED
+  mav_frame: BODY_NED       # BODY_NED move relative to UAV, LOCAL_NED move relative to "world"
 
 # vfr_hud
 # None

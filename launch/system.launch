@@ -57,7 +57,7 @@
 
   <node pkg="joy" type="joy_node" name="joy" required="True">
     <param name="autorepeat_rate" value="100" /> <!-- Minimal update rate, Hz -->
-    <param name="dev" value="/dev/input/by-id/usb-Sony_Computer_Entertainment_Wireless_Controller-joystick" /> <!-- value="/dev/input/js$(arg js)" /> -->
+    <param name="dev" value="/dev/input/by-id/usb-Sony_Interactive_Entertainment_Wireless_Controller-if03-joystick" /> <!-- value="/dev/input/js$(arg js)" /> -->
   </node>
 
   <!-- Pass in joy_config_file:=/path/to/config.yaml to change options. -->
