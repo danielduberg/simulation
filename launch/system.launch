@@ -31,39 +31,13 @@
   </node>
 -->
 
-  <node pkg="tf" type="static_transform_publisher" name="hokuyo_broadcaster" args="0.02 0 0.08 0 0 0 base_link laser_link 100" />
+  <node pkg="tf" type="static_transform_publisher" name="hokuyo_broadcaster" args="0.02 0 0.08 0 0 0 dd_slam_link laser_link 100" />
 
-  <node pkg="tf" type="static_transform_publisher" name="primesense_broadcaster" args="0.05 0 0.13 -1.57079633 0 -1.57079633 base_link camera_link 100" />
+  <node pkg="tf" type="static_transform_publisher" name="primesense_broadcaster" args="0.05 0 0.13 -1.57079633 0 -1.57079633 dd_slam_link camera_link 100" />
 
-  <node pkg="tf" type="static_transform_publisher" name="sonar_up_broadcaster" args="-0.05 0 0.22 0 -1.57079633 0 base_link sonar_up_link 100" />
+  <node pkg="tf" type="static_transform_publisher" name="sonar_up_broadcaster" args="-0.05 0 0.22 0 -1.57079633 0 dd_slam_link sonar_up_link 100" />
 
-  <node pkg="tf" type="static_transform_publisher" name="sonar_down_broadcaster" args="-0.05 0 -0.05 0 1.57079633 0 base_link sonar_down_link 100" />
+  <node pkg="tf" type="static_transform_publisher" name="sonar_down_broadcaster" args="-0.05 0 -0.05 0 1.57079633 0 dd_slam_link sonar_down_link 100" />
 
-  <node pkg="tf" type="static_transform_publisher" name="teraranger_broadcaster" args="0 0 -0.05 0 1.57079633 0 base_link teraranger_link 100" />
-
-  <arg name="controller_config_file"
-    default="$(find controller)/config/controller.yaml" />
-
-  <node pkg="controller" type="controller_node" name="controller_node">
-    <param name="max_xy_vel" type="double" value="2.0" />
-    <param name="max_z_vel" type="double" value="0.5" />
-    <param name="max_yaw_rate" type="double" value="0.7" />
-    <param name="robot_base_frame" type="str" value="base_link" />
-    <!--    <remap from="collision_free_control" to="controller/setpoint" />-->
-    <remap from="collision_free_control" to="controller/joy" />
-  </node>
-
-  <arg name="js" default="1" />
-
-  <node pkg="joy" type="joy_node" name="joy" required="True">
-    <param name="autorepeat_rate" value="100" /> <!-- Minimal update rate, Hz -->
-    <param name="dev" value="/dev/input/by-id/usb-Sony_Interactive_Entertainment_Wireless_Controller-if03-joystick" /> <!-- value="/dev/input/js$(arg js)" /> -->
-  </node>
-
-  <!-- Pass in joy_config_file:=/path/to/config.yaml to change options. -->
-  <arg name="joy_config_file" default="$(find controller_joy)/config/ds4.yaml" />
-
-  <node pkg="controller_joy" type="controller_joy_node" name="controller_joy_node">
-    <rosparam file="$(arg joy_config_file)" command="load" />
-  </node>
+  <node pkg="tf" type="static_transform_publisher" name="teraranger_broadcaster" args="0 0 -0.05 0 1.57079633 0 dd_slam_link teraranger_link 100" />
 </launch>
