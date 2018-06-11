@@ -7,7 +7,7 @@
   <!--
   <arg name="world" value="worlds/empty.world"/>
   -->
-  <arg name="world" default="$(find simulation)/worlds/building.world"/>
+  <arg name="world" default="$(find simulation)/worlds/building.world"/> <!-- planning_project.world"/ -->
   
   <arg name="sdf" default="$(find simulation)/models/uav/uav.sdf"/>
   
