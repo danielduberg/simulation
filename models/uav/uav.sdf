@@ -553,6 +553,7 @@
       <accelerometerTurnOnBiasSigma>0.0</accelerometerTurnOnBiasSigma>
     </plugin>
 	
+	<!--
 	<include>
 		<uri>model://hokuyo_lidar</uri>
 		<pose>0.02 0 0.08 0 0 0</pose>
@@ -562,6 +563,7 @@
 		<child>hokuyo_lidar::hokuyo_link</child>
 		<parent>base_link</parent>
 	</joint>
+	-->
 	
 	<!--
 	<include>
