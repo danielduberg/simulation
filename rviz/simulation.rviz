@@ -5,6 +5,7 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /Global Options1
+        - /SLAM Cloud1
       Splitter Ratio: 0.5
     Tree Height: 620
   - Class: rviz/Selection
@@ -30,9 +31,9 @@ Panels:
     Name: 3D Nav Goal
     nav_goal_2d_in_topic: /move_base_simple/goal
     nav_goal_3d_out_topic: /setpoint
-    z_slider_max: 10000
-    z_slider_min: -10000
-    z_slider_value: 1549
+    z_slider_max: 2000
+    z_slider_min: 350
+    z_slider_value: 350
   - Class: dd_obstacle_axis_view/Obstacle Axis View
     Name: Obstacle Axis View
     nav_goal_2d_in_topic: ""
@@ -154,14 +155,14 @@ Visualization Manager:
     - Alpha: 1
       Autocompute Intensity Bounds: true
       Autocompute Value Bounds:
-        Max Value: 10
-        Min Value: -10
+        Max Value: 1.92499995
+        Min Value: 0.224999994
         Value: true
       Axis: Z
       Channel Name: intensity
       Class: rviz/PointCloud2
       Color: 255; 255; 255
-      Color Transformer: Intensity
+      Color Transformer: AxisColor
       Decay Time: 0
       Enabled: true
       Invert Rainbow: false
@@ -174,8 +175,8 @@ Visualization Manager:
       Queue Size: 10
       Selectable: true
       Size (Pixels): 3
-      Size (m): 0.00999999978
-      Style: Flat Squares
+      Size (m): 0.100000001
+      Style: Boxes
       Topic: /dd_slam/octomap_point_cloud_centers
       Unreliable: false
       Use Fixed Frame: true
@@ -190,13 +191,13 @@ Visualization Manager:
       Queue Size: 100
       Value: true
     - Class: rviz/MarkerArray
-      Enabled: true
+      Enabled: false
       Marker Topic: /dd_slam/free_cells_vis_array
       Name: Free
       Namespaces:
         {}
       Queue Size: 100
-      Value: true
+      Value: false
     - Class: rviz/TF
       Enabled: false
       Frame Timeout: 15
@@ -236,25 +237,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 30.3104534
+      Distance: 37.2063713
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 1.64698827
-        Y: -0.822038174
-        Z: 0.520459294
+        X: 5.64623499
+        Y: -0.171095386
+        Z: 1.46679068
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.0500000007
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 1.56979632
+      Pitch: 0.434798002
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 3.19355226
+      Yaw: 3.13039565
     Saved: ~
 Window Geometry:
   3D Nav Goal:
